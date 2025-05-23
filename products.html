@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My E-Commerce Store</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <h1><b>TrendiHive</b></h1>
+
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="signup.html">Sign Up</a>
+          <a href="login.html">Login</a>
+          <a href="cart.html">Cart</a>
+        </nav>
+      </header>
+<header>
+  <h1>Catogeries</h1>
+  <nav class="categories">
+    <div class="category-buttons">
+      <button class="category-btn active" data-category="all">All</button>
+      <button class="category-btn" data-category="electronics">Electronics</button>
+      <button class="category-btn" data-category="fitness">Fitness</button>
+      <button class="category-btn" data-category="kitchen">Kitchen</button>
+    </div>
+  </nav>
+  <div id="userSection">
+    <span id="welcomeMsg"></span>
+    <button id="logoutBtn" style="display:none;">Logout</button>
+  </div>
+</header>
+
+<main>
+  <section class="product-list" id="productList">
+    <!-- Products injected here by JavaScript -->
+  </section>
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>

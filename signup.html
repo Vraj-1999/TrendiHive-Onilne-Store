@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sign Up - My Shop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    /* Base */
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background: #f0f4f8;
+      color: #222;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Navbar Header */
+    header {
+      background: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #ddd;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    header h1 {
+        font-weight:bold;
+  font-size: 28px;
+  color: #131921;
+  margin: 0;
+  letter-spacing: 1.2px;
+
+    }
+
+    nav a {
+      margin-left: 20px;
+      font-size: 1.1rem;
+      text-decoration: none;
+      color: #27ae60;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #2ecc71;
+    }
+
+    /* Signup container */
+    main {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    .signup-container {
+      width: 100%;
+      max-width: 420px;
+      background: #fff;
+      padding: 40px 103px;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .signup-container:hover {
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+    }
+
+    #signupForm h2 {
+      font-weight: 800;
+      font-size: 28px;
+      margin-bottom: 28px;
+      text-align: center;
+      color: #131921;
+      letter-spacing: 1.1px;
+      text-transform: uppercase;
+    }
+
+    #signupForm label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #444;
+      font-size: 1rem;
+    }
+
+    #signupForm input[type="text"],
+    #signupForm input[type="email"],
+    #signupForm input[type="password"] {
+      width: 91%;
+      padding: 14px 16px;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      font-size: 1rem;
+      margin-top: 6px;
+      margin-bottom: 24px;
+      font-weight: 500;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    #signupForm input[type="text"]:focus,
+    #signupForm input[type="email"]:focus,
+    #signupForm input[type="password"]:focus {
+      border-color: #27ae60;
+      box-shadow: 0 0 8px #27ae60aa;
+      outline: none;
+    }
+
+    #signupForm button {
+      width: 100%;
+      padding: 16px 0;
+      background: linear-gradient(45deg, #27ae60, #2ecc71);
+      border: none;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: white;
+      cursor: pointer;
+      letter-spacing: 1px;
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 6px 20px rgba(39, 174, 96, 0.4);
+    }
+
+    #signupForm button:hover {
+      background: linear-gradient(45deg, #2ecc71, #27ae60);
+      box-shadow: 0 10px 30px rgba(39, 174, 96, 0.7);
+    }
+
+    #message {
+      text-align: center;
+      margin-top: 16px;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    #message.error {
+      color: #b71c1c;
+    }
+
+    #message.success {
+      color: #155724;
+    }
+
+    /* Responsive for small screens */
+    @media (max-width: 480px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+      }
+
+      nav a {
+        margin-left: 10px;
+        font-size: 1rem;
+      }
+
+      .signup-container {
+        margin: 0 15px;
+        padding: 30px 25px;
+      }
+
+      #signupForm h2 {
+        font-size: 24px;
+      }
+
+      #signupForm button {
+        font-size: 1rem;
+        padding: 14px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><b>TrendiHive</b></h1>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="signup-container">
+      <form id="signupForm">
+        <h2>Create Account</h2>
+        <label>
+          Name:
+          <input type="text" name="name" required placeholder="Your Name" />
+        </label>
+        <label>
+          Email:
+          <input type="email" name="email" required placeholder="Your Email" />
+        </label>
+        <label>
+          Password:
+          <input type="password" name="password" required placeholder="Password" />
+        </label>
+        <button type="submit">Sign Up</button>
+        <p id="message"></p>
+      </form>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
